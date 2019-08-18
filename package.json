@@ -1,0 +1,34 @@
+{
+  "name": "areksbi.com",
+  "version": "1.0.0",
+  "description": "The code of my personal website areksbi.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Areksbi/areksbi.com.git"
+  },
+  "keywords": [
+    "web",
+    "html",
+    "css",
+    "javascript",
+    "pug",
+    "sass",
+    "vanilla",
+    "webpack",
+    "areksbi"
+  ],
+  "author": "Areksbi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Areksbi/areksbi.com/issues"
+  },
+  "homepage": "https://github.com/Areksbi/areksbi.com#readme",
+  "engines": {
+    "node": "^10.15.0",
+    "npm": "^6.4.1"
+  }
+}
