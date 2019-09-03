@@ -1,6 +1,6 @@
-module.exports = (name) => {
-  return `import './_${name.toLowerCase()}.scss';\
-  \n\nexport default class ${name} {\
+module.exports = (originalName, reworkedName) => {
+  return `import './_${originalName.toLowerCase()}.scss';\
+  \n\nexport default class ${reworkedName} {\
   \n\trender() {\
   \n\t\t// your code here\
   \n\t} \
