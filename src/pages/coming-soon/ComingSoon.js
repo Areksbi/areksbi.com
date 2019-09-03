@@ -1,4 +1,4 @@
-import './_comingsoon.scss';
+import './_coming-soon.scss';
 
 export default class ComingSoon {
   render() {
