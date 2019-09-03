@@ -120,18 +120,23 @@ class Generator {
   createJsFile(path) {
     if (this.noJs) return;
 
-    const name = this.name
+    const reworkedName = this.name
         .split(/[^\w\s]/gi)
         .filter((el) => !!el && el.length)
         .map((el) => el.charAt(0).toUpperCase() + el.slice(1).toLowerCase())
         .join('');
 
+    const cleanedPath = path.replace(this.src, '.');
     this.appendInFile(
         `${this.src}/index.js`,
-        `import ${name} from '${path.replace(this.src, '.')}/${name}';\
-        \ntry { new ${name}().render(); } catch (err) { console.error(err); }\n`
+        `import ${reworkedName} from '${cleanedPath}/${reworkedName}';\
+        \ntry { new ${reworkedName}().render(); } \
+        catch (err) { console.error(err); }\n`
     );
-    return this.createFile(`${path}/${name}.js`, this.jsTemplate(name));
+    return this.createFile(
+        `${path}/${reworkedName}.js`,
+        this.jsTemplate(this.name, reworkedName)
+    );
   }
 
   handleSuccess() {
