@@ -54,7 +54,9 @@ module.exports = {
     extensions: ['*', '.scss', '.js'],
     modules: ['node_modules', assets],
     alias: {
+      '@images': path.resolve(assets, 'images/'),
       '@scripts': path.resolve(assets, 'scripts/'),
+      '@src': src,
       '@styles': path.resolve(assets, 'styles/'),
       '@templates': path.resolve(assets, 'templates/'),
     },
