@@ -4,3 +4,9 @@ try {
 } catch (err) {
   console.error(err);
 }
+import ComingSoon from './pages/coming-soon/ComingSoon';
+try {
+  new ComingSoon().render();
+} catch (err) {
+  console.error(err);
+}

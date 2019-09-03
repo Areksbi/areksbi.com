@@ -6,6 +6,10 @@ module.exports = () => {
 		new HtmlWebpackPlugin({          
 			template: './src/pages/home/home.pug',          
 			filename: 'pages/home.html'          
+		}),                    
+		new HtmlWebpackPlugin({          
+			template: './src/pages/coming-soon/coming-soon.pug',          
+			filename: 'pages/coming-soon.html'          
 		}),          
 	];          
 };
