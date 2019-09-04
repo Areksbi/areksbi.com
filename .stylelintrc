@@ -1,7 +1,7 @@
 {
   "rules": {
     "at-rule-empty-line-before": ["always", {
-      "except": ["after-same-name"],
+      "except": ["after-same-name", "inside-block"],
       "ignoreAtRules": ["import", "if", "else if", "else", "mixin", "media"]
     }],
     "at-rule-name-case": "lower",
