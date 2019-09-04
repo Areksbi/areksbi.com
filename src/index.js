@@ -10,3 +10,9 @@ try {
 } catch (err) {
   console.error(err);
 }
+import ComingSoonImage from './molecules/coming-soon-image/ComingSoonImage';
+try {
+  new ComingSoonImage().render();
+} catch (err) {
+  console.error(err);
+}

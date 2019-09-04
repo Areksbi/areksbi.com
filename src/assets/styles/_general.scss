@@ -1,10 +1,5 @@
-@import "breakpoints";
+@import "variables";
 
 body {
-  @include media($to: "mbl") {
-    margin: 20px;
-  }
-  @include media($from: "mbl") {
-    margin: 30px;
-  }
+  margin: $padding-general;
 }

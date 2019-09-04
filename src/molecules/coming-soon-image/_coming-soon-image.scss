@@ -1,0 +1,48 @@
+@import "~@styles/_variables";
+
+.coming-soon-image {
+  $container-dim: map-get($breakpoints, "min") - ($padding-general * 2);
+
+  height: $container-dim;
+  margin: 0 auto;
+  position: relative;
+  width: $container-dim;
+
+  &__cactus,
+  &__cup,
+  &__desktop,
+  &__headphones,
+  &__smartphone {
+    position: absolute;
+  }
+
+  &__cactus {
+    bottom: 35px;
+    left: -60px;
+    width: 100px;
+  }
+
+  &__cup {
+    bottom: 15px;
+    right: -25px;
+    width: 60px;
+  }
+
+  &__desktop {
+    top: 40px;
+    width: 200px;
+  }
+
+  &__headphones {
+    right: -15px;
+    top: 35px;
+    transform: rotate(30deg);
+    width: 70px;
+  }
+
+  &__smartphone {
+    bottom: -10px;
+    right: 25px;
+    width: 60px;
+  }
+}
