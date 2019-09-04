@@ -1,0 +1,10 @@
+@import "breakpoints";
+
+body {
+  @include media($to: "mbl") {
+    margin: 20px;
+  }
+  @include media($from: "mbl") {
+    margin: 30px;
+  }
+}
