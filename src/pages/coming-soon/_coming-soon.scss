@@ -1,9 +1,6 @@
+@import "~@styles/_breakpoints";
 @import "~@styles/_colors";
 @import "~@styles/_general";
-
-body {
-  background-color: $bkg-grey-soft;
-}
 
 .coming-soon {
   &__title-group {
@@ -49,7 +46,14 @@ body {
   }
 
   &__main-title {
-    font-size: 14vw;
+    margin-bottom: 30px;
+    margin-top: 30px;
     text-align: center;
+    @include media($to: "lpt") {
+      font-size: 14vw;
+    }
+    @include media($from: "lpt") {
+      font-size: 180px;
+    }
   }
 }
