@@ -22,12 +22,19 @@ html
         h3.coming-soon__role Senior Web Developer
 
     main
-      section
-        header
-          h2 Coming Soon
-      section
-        p For now, visit my #[a(href='https://www.linkedin.com/in/baran-roman/') LinkedIn] profile!
-        p For now, visit my #[a(href='https://github.com/Areksbi/') GitHub] profile!
+      header
+        h2.coming-soon__main-title Coming Soo
 
     footer
+      div.footer__icons
+        figure.footer__icon-linkedin
+          a(href='https://www.linkedin.com/in/baran-roman/')
+            include ~@images/linkedin.svg
+          figcaption.footer__icon-caption--hidden LinkedIn link
+
+        figure.footer__icon-github
+          a(href='https://github.com/Areksbi/')
+            include ~@images/github.svg
+          figcaption.footer__icon-caption--hidden Github link
+
       +copyright
