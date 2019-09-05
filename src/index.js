@@ -16,3 +16,15 @@ try {
 } catch (err) {
   console.error(err);
 }
+import FooterIcons from './molecules/footer-icons/FooterIcons';
+try {
+  new FooterIcons().render();
+} catch (err) {
+  console.error(err);
+}
+import FooterCopyright from './molecules/footer-copyright/FooterCopyright';
+try {
+  new FooterCopyright().render();
+} catch (err) {
+  console.error(err);
+}

@@ -1,0 +1,26 @@
+@import "~@styles/_variables";
+@import "~@styles/_utils";
+
+.footer {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+
+  &__icons {
+    display: inline-block;
+
+    svg {
+      height: 38px;
+      width: 38px;
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin: 5px;
+
+    &-caption--hidden {
+      @include visually-hidden;
+    }
+  }
+}

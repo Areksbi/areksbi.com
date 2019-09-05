@@ -1,5 +1,4 @@
 include ~@templates/head
-include ~@templates/copyright
 
 html
   +head('Coming Soon')
@@ -8,6 +7,7 @@ html
     header
       section
         include ~@src/molecules/coming-soon-image/coming-soon-image
+
       section.coming-soon__title-group
         h1.coming-soon__name Roman Baran
         span.coming-soon__decorator aka
@@ -23,18 +23,8 @@ html
 
     main
       header
-        h2.coming-soon__main-title Coming Soo
+        h2.coming-soon__main-title Coming Soon
 
-    footer
-      div.footer__icons
-        figure.footer__icon-linkedin
-          a(href='https://www.linkedin.com/in/baran-roman/')
-            include ~@images/linkedin.svg
-          figcaption.footer__icon-caption--hidden LinkedIn link
-
-        figure.footer__icon-github
-          a(href='https://github.com/Areksbi/')
-            include ~@images/github.svg
-          figcaption.footer__icon-caption--hidden Github link
-
-      +copyright
+    footer.footer
+      include ~@src/molecules/footer-copyright/footer-copyright
+      include ~@src/molecules/footer-icons/footer-icons
