@@ -1,9 +1,12 @@
 @import "~@styles/_variables";
+@import "~@styles/_colors";
 @import "~@styles/_utils";
 
 .coming-soon-image {
   $container-dim: map-get($breakpoints, "min") - ($padding-general * 2);
 
+  background-color: $white;
+  border-radius: 50%;
   height: $container-dim;
   margin: 0 auto;
   position: relative;

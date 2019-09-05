@@ -1,1 +1,50 @@
+@import "~@styles/_colors";
 @import "~@styles/_general";
+
+body {
+  background-color: $bkg-grey-soft;
+}
+
+.coming-soon {
+  &__title-group {
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  &__decorator {
+    font: {
+      size: 16px;
+      style: italic;
+    }
+  }
+
+  &__nickname {
+    font-size: 40px;
+    margin: 0;
+
+    &--blue {
+      color: $blue;
+    }
+
+    &--red {
+      color: $red;
+    }
+
+    &--yellow {
+      color: $yellow;
+    }
+
+    &--green {
+      color: $green;
+    }
+  }
+
+  &__role {
+    font-size: 18px;
+    margin-top: 0;
+  }
+}
