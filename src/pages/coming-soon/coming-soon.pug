@@ -1,12 +1,12 @@
 include ~@templates/head
+include ~@src/molecules/coming-soon-image/coming-soon-image
 
 html
   +head('Coming Soon')
 
   body
     header
-      section
-        include ~@src/molecules/coming-soon-image/coming-soon-image
+      +coming-soon-image('section')
 
       section.coming-soon__title-group
         h1.coming-soon__name Roman Baran
