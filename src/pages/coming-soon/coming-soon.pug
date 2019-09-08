@@ -1,0 +1,30 @@
+include ~@templates/head
+include ~@src/molecules/coming-soon-image/coming-soon-image
+
+html
+  +head('Coming Soon')
+
+  body
+    header
+      +coming-soon-image('section')
+
+      section.coming-soon__title-group
+        h1.coming-soon__name Roman Baran
+        span.coming-soon__decorator aka
+        h2.coming-soon__nickname
+          span.coming-soon__nickname--blue A
+          span.coming-soon__nickname--red r
+          span.coming-soon__nickname--yellow e
+          span.coming-soon__nickname--blue k
+          span.coming-soon__nickname--green s
+          span.coming-soon__nickname--red b
+          span.coming-soon__nickname--yellow i
+        h3.coming-soon__role Senior Web Developer
+
+    main
+      header
+        h2.coming-soon__main-title Coming Soon
+
+    footer.footer
+      include ~@src/molecules/footer-copyright/footer-copyright
+      include ~@src/molecules/footer-icons/footer-icons

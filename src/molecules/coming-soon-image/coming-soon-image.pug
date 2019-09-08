@@ -1,0 +1,21 @@
+mixin coming-soon-image(tag)
+  #{tag}.coming-soon-image
+    figure.coming-soon-image__cactus
+      include ~@images/cactus.svg
+      figcaption.coming-soon-image__caption--hidden(aria-hidden=true) A cactus
+
+    figure.coming-soon-image__desktop
+      include ~@images/desktop.svg
+      figcaption.coming-soon-image__caption--hidden(aria-hidden=true) A computer desktop
+
+    figure.coming-soon-image__headphones
+      include ~@images/headphones.svg
+      figcaption.coming-soon-image__caption--hidden(aria-hidden=true) Headphone
+
+    figure.coming-soon-image__smartphone
+      include ~@images/smartphone.svg
+      figcaption.coming-soon-image__caption--hidden(aria-hidden=true) A smartphone
+
+    figure.coming-soon-image__cup
+      include ~@images/cup.svg
+      figcaption.coming-soon-image__caption--hidden(aria-hidden=true) A cup

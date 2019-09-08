@@ -1,0 +1,59 @@
+@import "~@styles/_breakpoints";
+@import "~@styles/_colors";
+@import "~@styles/_general";
+
+.coming-soon {
+  &__title-group {
+    text-align: center;
+  }
+
+  &__name {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  &__decorator {
+    font: {
+      size: 16px;
+      style: italic;
+    }
+  }
+
+  &__nickname {
+    font-size: 40px;
+    margin: 0;
+
+    &--blue {
+      color: $blue;
+    }
+
+    &--red {
+      color: $red;
+    }
+
+    &--yellow {
+      color: $yellow;
+    }
+
+    &--green {
+      color: $green;
+    }
+  }
+
+  &__role {
+    font-size: 18px;
+    margin-top: 0;
+  }
+
+  &__main-title {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    @include media($to: "lpt") {
+      font-size: 14vw;
+    }
+    @include media($from: "lpt") {
+      font-size: 180px;
+    }
+  }
+}
