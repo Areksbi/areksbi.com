@@ -1,9 +1,10 @@
 {
   "extends": ["eslint:recommended", "google"],
   "parserOptions": {
+    "allowImportExportEverywhere": true,
     "ecmaVersion": 2017,
-    "sourceType": "module",
-    "allowImportExportEverywhere": true
+    "parser": "babel-eslint",
+    "sourceType": "module"
   },
   "env": {
     "amd": true,
