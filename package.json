@@ -1,6 +1,6 @@
 {
   "name": "web-static-scaffolding",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A scaffolding to generate static web pages with a structure of atoms, molecules and organisms.",
   "main": "index.js",
   "scripts": {

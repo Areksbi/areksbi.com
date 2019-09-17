@@ -1,0 +1,9 @@
+include ~@templates/head
+
+mixin redirect(url)
+  - url = url || '/pages/coming-soon.html';
+
+  html
+    head
+      meta(http-equiv="refresh" content=`0 url='${url}'`)
+
