@@ -23,5 +23,9 @@ module.exports = () => {
       template: './src/molecules/footer-copyright/footer-copyright.pug',
       filename: 'molecules/footer-copyright.html'
     }),
-  ];
+		new HtmlWebpackPlugin({
+			template: './src/pages/index/index.pug',          
+			filename: 'pages/index.html'          
+		}),          
+	];          
 };
