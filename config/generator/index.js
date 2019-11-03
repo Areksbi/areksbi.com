@@ -93,11 +93,15 @@ class Generator {
       if (err) return console.error(err);
 
       const pugPath = `${path}/${this.name}.pug`;
+      const filename = this.type === 'page'
+        ? `${this.name}.html`
+        : `${this.type}s/${this.name}.html`;
+
       const result = data
           .replace(/(\n\t)?]([\S\s]*?)};/, `\
           \n\t\tnew HtmlWebpackPlugin({\
           \n\t\t\ttemplate: '${pugPath}',\
-          \n\t\t\tfilename: '${this.type}s/${this.name}.html'\
+          \n\t\t\tfilename: '${filename}'\
           \n\t\t}),\
           \n\t];\
           \n};`);
