@@ -5,10 +5,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - #{$padding-general * 2});
-
   /* stylelint-disable */
   min-height: -webkit-fill-available;
-
   /* stylelint-enable */
 }
 
