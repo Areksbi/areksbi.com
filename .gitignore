@@ -63,3 +63,4 @@ typings/
 # custom
 .idea
 dist
+.firebase
