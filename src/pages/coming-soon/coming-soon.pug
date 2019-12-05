@@ -11,10 +11,13 @@ html(lang='en')
     header
       +coming-soon-image('section')
 
-      section.coming-soon__title-group
-        h1.coming-soon__name Roman Baran
+      section.coming-soon__title-group(itemscope itemtype='https://schema.org/Person')
+        h1.coming-soon__name
+          span(itemprop='givenName') Roman
+          span &nbsp;
+          span(itemprop='familyName') Baran
         span.coming-soon__decorator aka
-        h2.coming-soon__nickname
+        h2.coming-soon__nickname(itemprop='additionalName')
           span.coming-soon__nickname--blue A
           span.coming-soon__nickname--red r
           span.coming-soon__nickname--yellow e
@@ -22,7 +25,7 @@ html(lang='en')
           span.coming-soon__nickname--green s
           span.coming-soon__nickname--red b
           span.coming-soon__nickname--yellow i
-        h3.coming-soon__role Lead Front End Developer
+        h3.coming-soon__role(itemprop='jobTitle') Lead Front End Developer
 
     main
       header
