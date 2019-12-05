@@ -3,7 +3,9 @@ include ~@templates/head
 mixin redirect(url)
   - url = url || '/coming-soon.html';
 
-  html
+  doctype html
+
+  html(lang=en)
     head
       meta(http-equiv="refresh" content=`0 url='${url}'`)
 
