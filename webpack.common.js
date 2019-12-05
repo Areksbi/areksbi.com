@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const generatedPlugins = require('./config/bundle/webpack.generatedPlugins');
 
 const src = path.resolve(__dirname, 'src');
@@ -86,5 +87,8 @@ module.exports = {
       },
     ]),
     ...generatedPlugins(),
+    new ScriptExtHtmlWebpackPlugin({
+      defer: /\.js$/,
+    }),
   ],
 };
