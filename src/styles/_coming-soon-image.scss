@@ -1,6 +1,6 @@
-@import "~@styles/_variables";
-@import "~@styles/_colors";
-@import "~@styles/_utils";
+@import "variables";
+@import "colors";
+@import "utils";
 
 .coming-soon-image {
   $container-dim: map-get($breakpoints, "min") - ($padding-general * 2);

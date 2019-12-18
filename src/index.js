@@ -1,25 +1,12 @@
-import ComingSoon from './pages/coming-soon/ComingSoon';
-try {
-  new ComingSoon().render();
-} catch (err) {
-  console.error(err);
-}
-import ComingSoonImage from './molecules/coming-soon-image/ComingSoonImage';
-try {
-  new ComingSoonImage().render();
-} catch (err) {
-  console.error(err);
-}
-import FooterIcons from './molecules/footer-icons/FooterIcons';
-try {
-  new FooterIcons().render();
-} catch (err) {
-  console.error(err);
-}
-import FooterCopyright from './molecules/footer-copyright/FooterCopyright';
-try {
-  new FooterCopyright().render();
-} catch (err) {
-  console.error(err);
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
+ReactDOM.render(<App />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
