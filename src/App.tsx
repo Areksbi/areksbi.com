@@ -80,7 +80,7 @@ const App: React.FC = () => {
             <span className="coming-soon__nickname--yellow">i</span>
           </h2>
           <h3 className="coming-soon__role" data-itemprop="jobTitle">
-            Lead Front End Developer
+            Lead Web Developer
           </h3>
         </section>
       </header>
@@ -94,7 +94,7 @@ const App: React.FC = () => {
         <div className="footer__icons">
           <figure className="footer__icon footer__icon-linkedin">
             <a
-              href="https://www.linkedin.com/in/baran-roman/"
+              href="https://linkedin.com/in/baran-roman/"
               aria-label="Go to my LinkedIn profile!"
             >
               <LinkedIn />
