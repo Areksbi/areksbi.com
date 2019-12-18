@@ -1,25 +1,45 @@
 {
   "name": "areksbi.com",
-  "version": "2.0.0",
-  "author": "Roman Baran",
-  "description": "Areksbi.com",
-  "license": "MIT",
+  "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "build": "react-scripts build",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "yarn build && firebase deploy",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "storybook": "start-storybook -p 9009 -s public",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "test": "react-scripts test"
+  },
   "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
     "firebase-tools": "^7.10.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "node-sass": "^4.13.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "prettier": "^1.19.1",
+    "react-styleguidist": "^10.3.2",
+    "source-map-explorer": "^2.1.2",
+    "typescript": "~3.7.2"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,11 +56,15 @@
       "last 1 safari version"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Areksbi/web-static-scaffolding.git"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-  "bugs": {
-    "url": "https://github.com/Areksbi/web-static-scaffolding/issues"
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

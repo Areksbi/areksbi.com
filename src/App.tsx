@@ -1,15 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.scss";
 
-function App() {
+const App: React.FC = () => {
   return (
     <div>
-      <title>Coming Soon - Areksbi</title>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content='Roman "Areksbi" Baran - Personal Website' />
-      <link href="/index.css" rel="stylesheet" />
       <header>
         <section className="coming-soon-image">
           <figure className="coming-soon-image__cactus">
@@ -418,16 +413,16 @@ function App() {
         </section>
         <section
           className="coming-soon__title-group"
-          itemScope
-          itemType="https://schema.org/Person"
+          data-itemscope
+          data-itemtype="https://schema.org/Person"
         >
           <h1 className="coming-soon__name">
-            <span itemProp="givenName">Roman</span>
+            <span data-itemprop="givenName">Roman</span>
             <span>&nbsp;</span>
-            <span itemProp="familyName">Baran</span>
+            <span data-itemprop="familyName">Baran</span>
           </h1>
           <span className="coming-soon__decorator">aka</span>
-          <h2 className="coming-soon__nickname" itemProp="additionalName">
+          <h2 className="coming-soon__nickname" data-itemprop="additionalName">
             <span className="coming-soon__nickname--blue">A</span>
             <span className="coming-soon__nickname--red">r</span>
             <span className="coming-soon__nickname--yellow">e</span>
@@ -436,7 +431,7 @@ function App() {
             <span className="coming-soon__nickname--red">b</span>
             <span className="coming-soon__nickname--yellow">i</span>
           </h2>
-          <h3 className="coming-soon__role" itemProp="jobTitle">
+          <h3 className="coming-soon__role" data-itemprop="jobTitle">
             Lead Front End Developer
           </h3>
         </section>
@@ -503,7 +498,7 @@ function App() {
         </div>
       </footer>
     </div>
-);
-}
+  );
+};
 
 export default App;
