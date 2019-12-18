@@ -7,7 +7,7 @@ html {
   background-color: $bkg-grey-soft;
 }
 
-body {
+#root {
   font-family: "Roboto", sans-serif;
   max-width: map-get($breakpoints, "lpt");
   margin: 0 auto;
