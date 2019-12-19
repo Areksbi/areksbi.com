@@ -1,12 +1,13 @@
 import React from "react";
-import { ReactComponent as Cactus } from "images/cactus.svg";
-import { ReactComponent as Desktop } from "images/desktop.svg";
-import { ReactComponent as Headphones } from "images/headphones.svg";
-import { ReactComponent as Smartphone } from "images/smartphone.svg";
-import { ReactComponent as Cup } from "images/cup.svg";
-import { ReactComponent as LinkedIn } from "images/linkedin.svg";
-import { ReactComponent as GitHub } from "images/github.svg";
 import "./App.scss";
+
+import { ReactComponent as Cactus } from "./images/cactus.svg";
+import { ReactComponent as Cup } from "./images/cup.svg";
+import { ReactComponent as Desktop } from "./images/desktop.svg";
+import { ReactComponent as GitHub } from "./images/github.svg";
+import { ReactComponent as Headphones } from "./images/headphones.svg";
+import { ReactComponent as LinkedIn } from "./images/linkedin.svg";
+import { ReactComponent as Smartphone } from "./images/smartphone.svg";
 
 const App: React.FC = () => {
   return (
