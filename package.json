@@ -1,76 +1,63 @@
 {
-  "name": "web-static-scaffolding",
-  "version": "1.1.0",
-  "description": "A scaffolding to generate static web pages with a structure of atoms, molecules and organisms.",
-  "main": "index.js",
+  "name": "areksbi.com",
+  "version": "2.0.3",
+  "private": true,
   "scripts": {
-    "generate": "node ./config/generator/index.js",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
-    "dev": "NODE_ENV=development webpack --config webpack.dev.js",
-    "prod": "NODE_ENV=production webpack --config webpack.prod.js",
-    "deploy": "npm run prod && node_modules/.bin/firebase deploy"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "build": "react-scripts build",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "yarn build && firebase deploy",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "storybook": "start-storybook -p 9009 -s public",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "test": "react-scripts test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Areksbi/web-static-scaffolding.git"
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0"
   },
-  "keywords": [
-    "web",
-    "static",
-    "scaffolding",
-    "html",
-    "css",
-    "javascript",
-    "pug",
-    "webpack",
-    "atom",
-    "molecule",
-    "organism"
-  ],
-  "author": "Roman Baran",
-  "license": "MIT",
-  "engines": {
-    "node": "^10.15.0",
-    "npm": "^6.4.1"
-  },
-  "bugs": {
-    "url": "https://github.com/Areksbi/web-static-scaffolding/issues"
-  },
-  "homepage": "https://github.com/Areksbi/web-static-scaffolding#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "autoprefixer": "^9.6.1",
-    "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^1.0.1",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.1.0",
-    "cssnano": "^4.1.10",
-    "eslint": "^6.2.2",
-    "eslint-config-google": "^0.13.0",
-    "firebase-tools": "^7.6.2",
-    "fs": "0.0.1-security",
-    "html-webpack-plugin": "^3.2.0",
-    "husky": "^3.0.4",
-    "lint-staged": "^9.2.3",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
-    "postcss-loader": "^3.0.0",
-    "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1",
-    "pug": "^2.0.4",
-    "pug-loader": "^2.4.0",
-    "sass": "^1.22.9",
-    "sass-loader": "^7.1.0",
-    "script-ext-html-webpack-plugin": "^2.1.4",
-    "semver": "^6.3.0",
-    "stylelint": "^10.1.0",
-    "svg-inline-loader": "^0.8.0",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
-    "webpack-dev-server": "^3.7.2",
-    "webpack-merge": "^4.2.1",
-    "yarn": "^1.17.3"
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "firebase-tools": "^7.10.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
+    "react-styleguidist": "^10.3.2",
+    "source-map-explorer": "^2.1.2",
+    "stylelint": "^12.0.0",
+    "tslint": "^5.20.1",
+    "tslint-react": "^4.1.0",
+    "typescript": "~3.7.2"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "husky": {
     "hooks": {
@@ -78,13 +65,17 @@
     }
   },
   "lint-staged": {
-    "*.scss": [
-      "stylelint --syntax=scss --fix",
-      "prettier --parser postcss --write",
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
       "git add"
     ],
-    "*.js": [
-      "eslint . --fix",
+    "src/**/*.{ts,tsx}": [
+      "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,css,scss}": [
+      "stylelint --syntax=scss --fix",
+      "prettier --parser=css --write",
       "git add"
     ]
   }
