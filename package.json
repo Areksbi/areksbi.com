@@ -72,6 +72,11 @@
     "src/**/*.{ts,tsx}": [
       "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix",
       "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,css,scss}": [
+      "stylelint --syntax=scss --fix",
+      "prettier --parser=css --write",
+      "git add"
     ]
   }
 }
