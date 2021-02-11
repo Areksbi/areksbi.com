@@ -1,0 +1,15 @@
+@import 'src/stylesheet/breakpoints';
+@import 'src/stylesheet/colors';
+@import 'src/stylesheet/variables';
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+
+html {
+  background-color: $bkg-grey-soft;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  max-width: map-get($breakpoints, 'lpt');
+  margin: 0 auto;
+  padding: $padding-general;
+}
