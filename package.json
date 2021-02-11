@@ -90,11 +90,11 @@
     }
   },
   "lint-staged": {
-    "*.js": [
+    "src/**/*.js": [
       "prettier --write",
       "eslint --fix"
     ],
-    "*{.json,.css,.scss,.html}": [
+    "src/**/*{.json,.css,.scss,.html}": [
       "prettier --write"
     ]
   }
