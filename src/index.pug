@@ -1,5 +1,13 @@
-html
-  head
+include molecules/head
+
+doctype html
+html(lang="en")
+  +head
 
   body
-    p Ciao
+    include molecules/header
+
+    main
+      include molecules/contacts
+      include molecules/experiences
+

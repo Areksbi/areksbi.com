@@ -13,7 +13,7 @@ const config = {
   site_url: 'https://areksbi.com"',
   googleAnalyticsUA: '',
   viewport: 'width=device-width,initial-scale=1',
-  favicon: path.join(ROOT, '/src/assets/images/favicon.png'),
+  favicon: path.join(ROOT, '/src/assets/images/favicon.ico'),
   dev_host: 'localhost',
   port: process.env.PORT || 8000,
   env: process.env.NODE_ENV,

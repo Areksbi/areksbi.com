@@ -1,0 +1,15 @@
+.header {
+  &__text {
+    &--bold {
+      font-weight: bold;
+    }
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+}

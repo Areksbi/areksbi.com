@@ -1,7 +1,9 @@
 @import 'src/stylesheet/breakpoints';
 @import 'src/stylesheet/colors';
 @import 'src/stylesheet/variables';
-@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import 'molecules/header';
 
 html {
   background-color: $bkg-grey-soft;
