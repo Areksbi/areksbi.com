@@ -1,0 +1,16 @@
+mixin certification(name, img, link, title, code, description, startDate, endDate)
+  article
+    header
+      a(href=link target='_blank' title=`Go to ${name} site` rel='noopener noreferrer')
+        img(src=img alt=`${name} logo`)
+      h3 #{title}
+      a(href=link target='_blank' rel='noopener noreferrer') #{name}
+      p
+        if endDate
+          i Emission: #{startDate} - Expiration: #{endDate}
+        else
+          i Emission: #{startDate}
+      p Credential ID: #{code}
+    section !{description}
+
+

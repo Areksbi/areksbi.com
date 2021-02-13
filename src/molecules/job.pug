@@ -1,11 +1,11 @@
-mixin job(companyName, companyImg, companyLink, jobTitle, description, startDate, endDate='Present')
+mixin job(name, img, link, title, description, startDate, endDate='Present')
   article
     header
-      a(href=companyLink target='_blank' title=`Go to ${companyName} site` rel='noopener noreferrer')
-        img(src=companyImg alt=`${companyName} logo`)
+      a(href=link target='_blank' title=`Go to ${name} site` rel='noopener noreferrer')
+        img(src=img alt=`${name} logo`)
       h3
-        a(href=companyLink target='_blank' rel='noopener noreferrer') #{companyName}
-        |  - #{jobTitle}
+        a(href=link target='_blank' rel='noopener noreferrer') #{name}
+        |  - #{title}
       p
         i #{startDate} - #{endDate}
     section !{description}
