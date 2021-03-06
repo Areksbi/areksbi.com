@@ -1,4 +1,4 @@
-mixin job(name, img, link, title, description, startDate, endDate='Present')
+mixin job(name, img, link, title, location, description, startDate, endDate='Present')
   article
     header
       a(href=link target='_blank' title=`Go to ${name} site` rel='noopener noreferrer')
@@ -8,4 +8,5 @@ mixin job(name, img, link, title, description, startDate, endDate='Present')
         |  - #{title}
       p
         i #{startDate} - #{endDate}
+      p #{location}
     section !{description}
